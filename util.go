@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"math/rand"
 	"net/url"
 	"os"
 	"strings"
@@ -73,13 +72,4 @@ func getTimeStamp() string {
 func getRequestId(sessionId string) string {
 	pwd := fmt.Sprintf("REQUESTED%sID", sessionId)
 	return Encrypt(`{"sc":[147,307]}`, pwd)
-}
-
-func randomHex(length int) string {
-	chars := []rune("0123456789abcdef")
-	var b strings.Builder
-	for i := 0; i < length; i++ {
-		b.WriteRune(chars[rand.Intn(len(chars))])
-	}
-	return b.String()
 }

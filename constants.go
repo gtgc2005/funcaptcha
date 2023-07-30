@@ -2,6 +2,7 @@ package funcaptcha
 
 import http "github.com/bogdanfinn/fhttp"
 
+var bv = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
 var headers = http.Header{
 	"Accept":           []string{"*/*"},
 	"Accept-Encoding":  []string{"gzip, deflate, br"},
@@ -170,7 +171,7 @@ const bx_template string = `
 		"value": "[[],[],[]]"
 	}, {
 		"key": "window__location_href",
-		"value": "https://tcr9i.chat.openai.com/v2/1.5.2/enforcement.%s.html#35536E1E-65B4-4D96-9D97-6ADB7EFF8147"
+		"value": "https://tcr9i.chat.openai.com/v2/%s/enforcement.%s.html#35536E1E-65B4-4D96-9D97-6ADB7EFF8147"
 	}, {
 		"key": "client_config__sitedata_location_href",
 		"value": "https://chat.openai.com"
@@ -232,8 +233,7 @@ var fe = []map[string]interface{}{
 }
 
 const (
-	p  = "Chrome PDF Viewer::Portable Document Format::application/pdf~pdf,text/pdf~pdf;Chromium PDF Viewer::Portable Document Format::application/pdf~pdf,text/pdf~pdf;Microsoft Edge PDF Viewer::Portable Document Format::application/pdf~pdf,text/pdf~pdf;PDF Viewer::Portable Document Format::application/pdf~pdf,text/pdf~pdf;WebKit built-in PDF::Portable Document Format::application/pdf~pdf,text/pdf~pdf"
-	bv = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+	p = "Chrome PDF Viewer::Portable Document Format::application/pdf~pdf,text/pdf~pdf;Chromium PDF Viewer::Portable Document Format::application/pdf~pdf,text/pdf~pdf;Microsoft Edge PDF Viewer::Portable Document Format::application/pdf~pdf,text/pdf~pdf;PDF Viewer::Portable Document Format::application/pdf~pdf,text/pdf~pdf;WebKit built-in PDF::Portable Document Format::application/pdf~pdf,text/pdf~pdf"
 )
 
 const (
